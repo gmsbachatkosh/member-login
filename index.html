@@ -148,11 +148,11 @@
 
     <!-- Custom JS for form handling -->
     <script>
-        // Hardcoded member names and passwords
+        // Hardcoded member names and passwords with relative paths for redirection
         const members = [
-            { name: "anil", password: "GMS-anil", redirectTo: "https://gmsbachatkosh.github.io/member-anil/" },
-            { name: "bindu", password: "GMS-bindu", redirectTo: "https://gmsbachatkosh.github.io/member-bindu/" },
-            { name: "sajina", password: "GMS-sajina", redirectTo: "https://gmsbachatkosh.github.io/member-sajina/" }
+            { name: "anil", password: "GMS-anil", redirectTo: "/member-anil/" },
+            { name: "bindu", password: "GMS-bindu", redirectTo: "/member-bindu/" },
+            { name: "sajina", password: "GMS-sajina", redirectTo: "/member-sajina/" }
         ];
 
         // Event listener for the form submit
@@ -168,7 +168,7 @@
             members.forEach(function(member) {
                 if (member.name === memberName && member.password === password) {
                     memberFound = true;
-                    // Redirect to the member's specific page
+                    // Redirect to the member's specific page (relative path)
                     window.location.href = member.redirectTo;
                 }
             });
