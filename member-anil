@@ -19,7 +19,12 @@
             right: 20px;
             z-index: 1050;
         }
-
+             /* Positioning the logout button at the top-left corner */
+            #logoutBtn {
+            top: 20px;
+            left: 20px;
+            z-index: 1050;
+        }
         .alert-icon {
             font-size: 30px;
             color: red;
@@ -191,6 +196,10 @@
     </style>
 </head>
 <body>
+<!-- Logout Button (Top-left corner) -->
+  <button id="logoutBtn" class="btn btn-danger position-absolute" style="top: 20px; left: 20px; z-index: 1050;">
+    Logout
+  </button>
   <!-- Alert Message Section -->
     <div class="alert-container">
         <span class="alert-icon">
@@ -471,6 +480,10 @@
         populateDropdowns("nepaliYearDeposit", "nepaliMonthDeposit");
         populateDropdowns("nepaliYearLoan", "nepaliMonthLoan");
     </script>
-
+ // Logout function
+    document.getElementById("logoutBtn").addEventListener("click", function () {
+        window.location.href = "index.html"; // Redirect to the login page
+    });
+  </script>
 </body>
 </html>
